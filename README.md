@@ -5,7 +5,7 @@ Chinese cross-border-payment **regulations and enforcement cases**, returning a
 **structured 5-section answer** (结论 / 法律依据 / 案例支撑 / 风险 / 建议) whose every
 sentence is grounded in a retrieved source — so it cannot fabricate statutes.
 
-> **Live demo:** https://complianceiq.vercel.app
+> **Live demo:** https://complianceiq-woad.vercel.app
 > **Stack:** Vite + React + TypeScript, zero runtime dependencies. Fully client-side — runs with no backend and no API key.
 
 ---

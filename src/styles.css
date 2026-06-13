@@ -1,0 +1,107 @@
+:root {
+  --bg: #0c0e12;
+  --panel: #14171d;
+  --panel-2: #191d25;
+  --line: #262b35;
+  --fg: #e8eaf0;
+  --muted: #9aa3b2;
+  --accent: #6d8bff;
+  --accent-soft: rgba(109, 139, 255, 0.14);
+  --reg: #6d8bff;
+  --case: #d6a35c;
+  --radius: 14px;
+  --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+  --sans: "Inter", -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root { margin: 0; height: 100%; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { width: 100%; max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+.hero {
+  border-bottom: 1px solid var(--line);
+  background: radial-gradient(120% 140% at 80% -20%, var(--accent-soft), transparent 60%);
+  padding: 56px 0 40px;
+}
+.brand {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.hero h1 { font-size: clamp(28px, 5vw, 44px); margin: 14px 0 10px; letter-spacing: -0.01em; }
+.sub { color: var(--muted); max-width: 620px; margin: 0; }
+.stats {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px;
+  font-family: var(--mono); font-size: 12px; color: var(--muted);
+}
+.stats span { border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; }
+.stats b { color: var(--fg); }
+
+main.wrap { padding-top: 32px; padding-bottom: 24px; }
+
+.search { display: flex; gap: 10px; }
+.search input {
+  flex: 1; background: var(--panel); border: 1px solid var(--line); color: var(--fg);
+  border-radius: 999px; padding: 13px 20px; font-size: 15px; font-family: var(--sans);
+}
+.search input:focus { outline: none; border-color: var(--accent); }
+.search button {
+  background: var(--accent); color: #0c0e12; border: 0; border-radius: 999px;
+  padding: 0 24px; font-weight: 600; font-size: 15px; cursor: pointer;
+}
+.search button:hover { filter: brightness(1.08); }
+
+.presets { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.chip {
+  background: transparent; border: 1px solid var(--line); color: var(--muted);
+  border-radius: 999px; padding: 7px 14px; font-size: 13px; cursor: pointer; transition: 0.15s;
+}
+.chip:hover { border-color: var(--accent); color: var(--fg); }
+
+.hint, .foot p { color: var(--muted); font-size: 14px; }
+.hint { margin-top: 32px; }
+
+.result { margin-top: 32px; display: flex; flex-direction: column; gap: 16px; }
+.qline { font-family: var(--mono); font-size: 13px; color: var(--muted); }
+.qlabel { color: var(--accent); margin-right: 8px; }
+
+.sec-head {
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 8px;
+}
+.conclusion, .block, .evidence {
+  background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px;
+}
+.conclusion { border-left: 3px solid var(--accent); }
+.block p, .conclusion p { margin: 0 0 10px; white-space: pre-line; }
+.block p:last-child, .conclusion p:last-child { margin-bottom: 0; }
+
+.evidence { display: flex; flex-direction: column; gap: 12px; }
+.ev { background: var(--panel-2); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+.ev-top { display: flex; align-items: center; gap: 10px; }
+.ev-title { flex: 1; font-weight: 600; font-size: 15px; }
+.ev-score { font-family: var(--mono); font-size: 13px; color: var(--muted); }
+.ev-src { color: var(--muted); font-size: 13px; margin: 4px 0 8px; }
+.ev-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { font-family: var(--mono); font-size: 11px; color: var(--muted); border: 1px solid var(--line); border-radius: 6px; padding: 2px 7px; }
+.badge {
+  font-family: var(--mono); font-size: 11px; padding: 2px 8px; border-radius: 6px; color: #0c0e12; font-weight: 700;
+}
+.badge.regulation { background: var(--reg); }
+.badge.case { background: var(--case); }
+
+.foot { border-top: 1px solid var(--line); margin-top: 48px; padding-top: 20px; padding-bottom: 48px; }
+.foot a { color: var(--accent); text-decoration: none; }
+.foot a:hover { text-decoration: underline; }
